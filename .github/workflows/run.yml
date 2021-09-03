@@ -27,5 +27,3 @@ jobs:
           notebook: "get_bus_tables.ipynb"
           params:
           isReport: False
-          poll: False
-
