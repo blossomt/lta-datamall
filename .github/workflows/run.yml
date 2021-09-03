@@ -28,7 +28,7 @@ jobs:
       - run: mkdir -p output
       - run: python get_bus_tables.py
         env:
-          key: ${{ secrets.ACCOUNTKEY }}
+          ACCOUNTKEY: ${{ secrets.ACCOUNTKEY }}
       - name: Commit changes
         run: |
           git config --local user.email "action@github.com"
