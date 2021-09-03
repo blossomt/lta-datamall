@@ -25,5 +25,4 @@ jobs:
           key: ${{ secrets.AccountKey }}
         with:
           notebook: "get_bus_tables.ipynb"
-          params:
           isReport: False
