@@ -4,8 +4,8 @@ from csv import DictWriter
 from dotenv import load_dotenv
 from datetime import date 
 
-load_dotenv()
-key = os.environ.get('AccountKey')
+#load_dotenv()
+key = os.environ('ACCOUNTKEY')
 method = 'GET'
 headers = { 'AccountKey' : key,
             'accept' : 'application/json'}
