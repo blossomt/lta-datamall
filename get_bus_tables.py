@@ -1,4 +1,6 @@
-import requests, csv, os
+import os
+from requests import get
+from csv import DictWriter
 from dotenv import load_dotenv
 from datetime import date 
 
@@ -25,7 +27,7 @@ def get_all_data(base_uri,output_file):
                 end = True
             n += nrow
         else:
-#             print("Failed to request with error "+str(response.status_code))
+            print("Failed to request with error "+str(response.status_code))
             end = True
     #Write list
     with open(output_file,'w',encoding='utf-8') as f:
