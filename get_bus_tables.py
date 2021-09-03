@@ -17,7 +17,7 @@ def get_all_data(base_uri,output_file):
     result_arr = []
     while end == False:
         uri = base_uri+"?$skip="+str(n)
-        response = requests.get(uri, headers=headers)
+        response = get(uri, headers=headers)
         if response.status_code == 200:
 #             print("Getting rows "+str(n)+"+...")
             jsonObj = response.json()
@@ -32,7 +32,7 @@ def get_all_data(base_uri,output_file):
     #Write list
     with open(output_file,'w',encoding='utf-8') as f:
         title = [*result_arr[0].keys()]
-        cw = csv.DictWriter(f,title,delimiter=",")
+        cw = DictWriter(f,title,delimiter=",")
         cw.writeheader()
         cw.writerows(result_arr)
     print("Total rows: "+str(n))
