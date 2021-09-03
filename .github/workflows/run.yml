@@ -3,7 +3,7 @@ name: extract-data
 on:
   workflow_dispatch:
   schedule:
-    - cron: "33 22 * * *"
+    - cron: "0 * * * *"
 
 jobs:
   build:
