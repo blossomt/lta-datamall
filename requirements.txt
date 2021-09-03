@@ -1,5 +1,5 @@
 requests
-csv
+python-csv
 os
-dotenv
+python-dotenv
 datetime
