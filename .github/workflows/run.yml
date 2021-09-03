@@ -18,11 +18,16 @@ jobs:
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
-
-      # Runs a single command using the runners shell
-      - uses: yaananth/run-notebook@v1
+      - uses: actions/setup-python@v2
+        with:
+          python-version: 3.8
+      - run: python get_bus_tables.py
         env:
           key: ${{ secrets.AccountKey }}
-        with:
-          notebook: "get_bus_tables.ipynb"
-          isReport: False
+#      # Runs a single command using the runners shell
+#      - uses: yaananth/run-notebook@v1
+#        env:
+#          key: ${{ secrets.AccountKey }}
+#        with:
+#          notebook: "get_bus_tables.ipynb"
+#          isReport: False
