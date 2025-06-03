@@ -38,11 +38,11 @@ def get_all_data(base_uri,output_file):
 today = date.today().strftime("%Y%m%d")
 
 #Bus service
-bus_svc_uri = "http://datamall2.mytransport.sg/ltaodataservice/BusServices"
+bus_svc_uri = "https://datamall2.mytransport.sg/ltaodataservice/BusServices"
 #Bus route
-bus_route_uri = "http://datamall2.mytransport.sg/ltaodataservice/BusRoutes"
+bus_route_uri = "https://datamall2.mytransport.sg/ltaodataservice/BusRoutes"
 #Bus stop coordinates
-bus_stop_uri = "http://datamall2.mytransport.sg/ltaodataservice/BusStops"
+bus_stop_uri = "https://datamall2.mytransport.sg/ltaodataservice/BusStops"
 
 print(today)
 get_all_data(bus_stop_uri,os.path.join('output',today+'bus_stop.csv'))
